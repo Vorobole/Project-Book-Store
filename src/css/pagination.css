@@ -1,0 +1,94 @@
+.cart-buttons-container {
+  /* margin: 0 auto; */
+  position: relative;
+  overflow-x: hidden;
+  margin-bottom: 40px;
+  /* bottom: -100%; */
+  /* padding: 20px; */
+}
+
+.pagination-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  /* max-width: 375px; */
+  /* justify-content: center; */
+  transition: 0.5s;
+  margin: 0 auto;
+}
+
+.pagination-list > li > button {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid black;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22em;
+  background-color: white;
+}
+
+.pagination-list > li > button {
+  transform-origin: center top;
+  transition: 0.5s;
+}
+
+.pagination-list > li > button.active {
+  background-color: #111111;
+  color: white;
+}
+
+body.dark-theme .pagination-list > li > button.active {
+  background-color: white;
+  color: black;
+}
+
+body.dark-theme .pagination-list > li > button {
+  border-color: white;
+  color: white;
+  background-color: transparent;
+}
+
+.buttons-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(246, 246, 246, 1) 0%,
+    rgba(246, 246, 246, 0.3015800070028011) 40%,
+    rgba(246, 246, 246, 0) 50%,
+    rgba(246, 246, 246, 0.3015800070028011) 60%,
+    rgba(246, 246, 246, 1) 100%
+  );
+  pointer-events: none;
+}
+
+body.dark-theme .buttons-overlay {
+  background: linear-gradient(
+    270deg,
+    rgba(32, 32, 36, 1) 0%,
+    rgba(32, 32, 36, 0.2987788865546218) 40%,
+    rgba(32, 32, 36, 0) 50%,
+    rgba(32, 32, 36, 0.30438112745098034) 60%,
+    rgba(32, 32, 36, 1) 100%
+  );
+}
+
+@media screen and (min-width: 768px) {
+  .pagination-list > li > button {
+    height: 44px;
+    width: 44px;
+    gap: 8px;
+  }
+
+  .pagination-list {
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}

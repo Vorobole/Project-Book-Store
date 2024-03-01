@@ -1,0 +1,162 @@
+.bestsellers {
+  width: 100%;
+}
+
+.bestsellers-container {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1875;
+  letter-spacing: -0.04em;
+  color: #111;
+  margin-bottom: 40px;
+}
+
+body.dark-theme .page-title {
+  color: #fff;
+}
+
+.page-title-highlight {
+  color: #4f2ee8;
+}
+
+.bestsellers-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.bestsellers-item {
+  width: 100%;
+}
+
+.bestsellers-category-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #b4afaf;
+  margin-bottom: 18px;
+}
+
+.category-empty {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.28571;
+  letter-spacing: 0.03em;
+  color: #4f2ee8;
+}
+
+.bestsellers-books-list {
+  display: flex;
+  height: 535px;
+  margin-bottom: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-category-item {
+  width: 335px;
+  align-items: center;
+}
+
+.bestsellers-books-list .book-category-item:nth-child(2),
+.bestsellers-books-list .book-category-item:nth-child(3),
+.bestsellers-books-list .book-category-item:nth-child(4),
+.bestsellers-books-list .book-category-item:nth-child(5) {
+  display: none;
+}
+
+.book-category-image {
+  width: 100%;
+  height: 485px;
+  border-radius: 8px;
+}
+
+.bestsellers-btn {
+  border: 2px solid #4f2ee8;
+  border-radius: 40px;
+  padding: 14px 26px;
+  width: 124px;
+  height: 46px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111;
+  float: right;
+  background-color: transparent;
+}
+
+body.dark-theme .bestsellers-btn {
+  color: #fff;
+}
+
+.bestsellers-btn:hover,
+.bestsellers-btn:focus {
+  background-color: #4f2ee8;
+  color: #fff;
+}
+
+body.dark-theme .bestsellers-btn:hover,
+body.dark-theme .bestsellers-btn:focus {
+  background-color: #eac645;
+  color: #111;
+}
+
+/*====================768px=======================*/
+
+@media screen and (min-width: 768px) {
+  .bestsellers-container {
+    padding-top: 98px;
+    padding-bottom: 100px;
+  }
+
+  .page-title {
+    font-size: 48px;
+    line-height: 1.08333;
+  }
+
+  .bestsellers-books-list {
+    gap: 25px;
+    height: 366px;
+    margin-bottom: 20px;
+  }
+
+  .bestsellers-books-list .book-category-item:nth-child(2),
+  .bestsellers-books-list .book-category-item:nth-child(3) {
+    display: block;
+  }
+}
+
+/*====================1440px=====================*/
+
+@media screen and (min-width: 1440px) {
+  .bestsellers-container {
+    padding-top: 0;
+    padding-bottom: 72px;
+    max-width: 996px;
+  }
+
+  .bestsellers-books-list {
+    gap: 24px;
+    height: 306px;
+    margin-bottom: 32px;
+  }
+
+  .bestsellers-books-list .book-category-item:nth-child(4),
+  .bestsellers-books-list .book-category-item:nth-child(5) {
+    display: block;
+  }
+}
+
+/*===================================================*/

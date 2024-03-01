@@ -1,0 +1,252 @@
+/* Light version */
+/* Мobile */
+* {
+  list-style: none;
+}
+
+.backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  background: #11111166;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}
+
+.modal-open {
+  display: block;
+  z-index: 9999;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal-wrapper {
+  margin-bottom: 44px;
+  display: block;
+}
+
+.modal-window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 2px #111111 solid;
+  border-radius: 18px;
+  padding: 40px 24px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* desktop/tablet */
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+body.dark-theme .modal-window {
+  background-color: #202024;
+  color: white;
+  border-color: white;
+}
+
+.modal-close {
+  position: absolute;
+  display: block;
+  margin: 0;
+  right: 12px;
+  top: 12px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:focus {
+  background-color: transparent;
+}
+
+.modal-icon-close {
+  stroke: #111111;
+  width: 16px;
+  height: 16px;
+}
+
+.modal-icon-close:focus {
+  background-color: transparent;
+}
+
+body.dark-theme .modal-icon-close {
+  stroke: #fff;
+}
+
+.modal-close:hover .modal-icon-close {
+  stroke: #4f2ee8;
+}
+
+body.dark-theme .modal-icon-close:hover {
+  stroke: #4f2ee8;
+}
+
+.modal-img-book {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.modal-book-container-right {
+  overflow: hidden;
+}
+
+.modal-book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.modal-book-description {
+  margin-bottom: 14px;
+}
+
+.modal-description-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.modal-description-author {
+  color: #b4afaf;
+  font-size: 12px;
+  line-height: 1.17;
+  font-style: italic;
+}
+
+.modal-book-description {
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.modal-icons-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-link-icon-amazon,
+.modal-link-icon-apple {
+  filter: grayscale(100%);
+}
+
+body.dark-theme .modal-link-icon-amazon {
+  filter: brightness(0) invert(1);
+}
+
+body.dark-theme .modal-link-icon-apple:hover,
+body.dark-theme .modal-link-icon-apple:active,
+body.dark-theme .modal-link-icon-amazon:hover,
+body.dark-theme .modal-link-icon-amazon:active {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+}
+
+.modal-link-icon-amazon:hover,
+.modal-link-icon-amazon:active,
+.modal-link-icon-apple:hover,
+.modal-link-icon-apple:active {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.modal-btn-addremove {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #4f2ee8;
+  border-radius: 40px;
+  padding: 14px 28px;
+  margin: 8px auto;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+}
+
+body.dark-theme .modal-btn-addremove {
+  color: #fff;
+}
+
+.modal-btn-addremove:hover,
+.modal-btn-addremove:focus {
+  background-color: #4f2ee8;
+  color: #ffffff;
+}
+
+.modal-text-congratulations {
+  line-height: 1.2;
+  font-size: 10px;
+  max-width: 242px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-window {
+    width: 579px;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+  }
+
+  .modal-icon-close {
+    width: 18px;
+    height: 18px;
+    top: 31px;
+    right: 31px;
+  }
+
+  .modal-wrapper {
+    display: flex;
+    gap: 24px;
+  }
+
+  .modal-img-book {
+    width: 192px;
+    margin-bottom: 0;
+  }
+
+  .modal-description-title {
+    font-size: 24px;
+    line-height: 1.17;
+    white-space: unset;
+    text-overflow: unset;
+  }
+
+  .modal-btn-addremove {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .modal-text-congratulations {
+    line-height: 1.2;
+    font-size: 12px;
+    max-width: 324px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+  }
+}
+/* @media screen and (min-width: 1440px) {
+} */
