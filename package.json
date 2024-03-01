@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/JSquad/",
+    "build": "vite build --base=/Project-Book-Store/",
     "preview": "vite preview"
   },
   "devDependencies": {
